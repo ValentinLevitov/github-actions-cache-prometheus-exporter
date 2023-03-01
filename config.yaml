@@ -1,0 +1,19 @@
+repositories:
+  - { org: valentinlevitov, name: for-tests }
+  - { org: valentinlevitov, name: bender }
+
+branch_patterns:
+  - { pattern: refs/pull/ID/merge, rx: refs/pull/\d+/merge }
+
+key_patterns:
+  []
+  # - {pattern: dependencies-cache-GUID, rx: 'dependencies-cache-[a-z0-9]{64}'}
+  # - {pattern: simple-GUID, rx: 'simple-[a-z0-9]{64}'}
+  # - {pattern: studio-appSize-json-GUID, rx: 'studio-appSize-json-[a-z0-9]{40}'}
+  # - {pattern: Linux-coverage-base-cache-GUID, rx: 'Linux-coverage-base-cache-[a-z0-9]{40}'}
+  # - {pattern: members-appSize-json-GUID, rx: 'members-appSize-json-[a-z0-9]{40}'}
+  # - {pattern: GUID-copy-type-cache, rx: '[a-z0-9]{40}-copy-type-cache'}
+
+port: 9095
+
+app_log_level: INFO

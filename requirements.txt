@@ -1,0 +1,5 @@
+requests
+yaml8
+prometheus_client
+yo-fluq
+pydantic
