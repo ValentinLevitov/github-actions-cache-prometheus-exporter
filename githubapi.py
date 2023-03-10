@@ -17,8 +17,7 @@ class _CachePager:
         return get(url, headers=headers)
 
     def __call__(self, page: int) -> Tuple[int, list]:
-        endpoint = f"https://api.github.com/repos/{self.repo.org}\
-            /{self.repo.name}/actions/caches?per_page={self.per_page}&page={page}"
+        endpoint = f"https://api.github.com/repos/{self.repo.org}/{self.repo.name}/actions/caches?per_page={self.per_page}&page={page}"
         response = self._getResponse(endpoint)
         logging.info(
             f"repo: {self.repo.org}/{self.repo.name}, page: {page}, response code: {response.status_code}"
@@ -26,8 +25,7 @@ class _CachePager:
         return page, response.json()["actions_caches"]
 
     def getPagesCount(self) -> int:
-        endpoint = f"https://api.github.com/repos/{self.repo.org}/\
-            {self.repo.name}/actions/caches?per_page=0"
+        endpoint = f"https://api.github.com/repos/{self.repo.org}/{self.repo.name}/actions/caches?per_page=0"
         response = self._getResponse(endpoint)
         logging.info(
             f"repo: {self.repo.org}/{self.repo.name}, get pages count, response code: {response.status_code}"

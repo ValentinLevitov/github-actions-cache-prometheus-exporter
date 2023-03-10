@@ -1,5 +1,5 @@
 repositories:
-  - { org: valentinlevitov, name: for-tests }
+  - { org: valentinlevitov, name: github-actions-cache-prometheus-exporter }
   - { org: valentinlevitov, name: bender }
 
 branch_patterns:
